@@ -1,35 +1,32 @@
-// app.js
-document.addEventListener("DOMContentLoaded", () => {
-  const orderButton = document.getElementById("orderBtn");
+// Console message
+console.log("सुरेखा भोजन वेबसाइट सुरू झाली आहे.");
 
-  if (orderButton) {
-    orderButton.addEventListener("click", () => {
-      alert("आपली ऑर्डर यशस्वीरित्या नोंदवली गेली आहे! 😊");
+// बटण क्लिक केल्यावर alert द्या
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log("बटण क्लिक झाले");
     });
-  }
 });
-// फक्त ठाण्यातील पिनकोड
-const thanePincodes = ["400601", "400602", "400603", "400604", "400605", "400606", "400607"];
 
-const form = document.getElementById("orderForm");
-const message = document.getElementById("message");
+// आजची तारीख खाली Footer ला दिसवा
+const footer = document.querySelector('footer');
+if (footer) {
+    const date = new Date().toLocaleDateString('mr-IN');
+    const datePara = document.createElement('p');
+    datePara.innerText = `🗓️ आजची तारीख: ${date}`;
+    footer.appendChild(datePara);
+}
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const address = document.getElementById("address").value;
-    const pincode = document.getElementById("pincode").value;
-
-    if (!thanePincodes.includes(pincode)) {
-        message.style.color = "red";
-        message.textContent = "❌ माफ करा! सध्या फक्त ठाण्यातील पिनकोडसाठी ऑर्डर स्वीकारली जाते.";
-        return;
-    }
-
-    message.style.color = "green";
-    message.textContent = `✅ धन्यवाद ${name}! तुमची ऑर्डर सबमिट झाली आहे.`;
-
-    form.reset();
-});
+// QR कोड क्लिक केल्यावर Zoom करा
+const qrImg = document.querySelector('.qr img');
+if (qrImg) {
+    qrImg.style.cursor = 'pointer';
+    qrImg.addEventListener('click', () => {
+        if (qrImg.style.transform === 'scale(1.5)') {
+            qrImg.style.transform = 'scale(1)';
+        } else {
+            qrImg.style.transform = 'scale(1.5)';
+        }
+        qrImg.style.transition = 'transform 0.3s ease-in-out';
+    });
+}
