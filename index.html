@@ -1,43 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="mr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>सुरेखा भोजन – घरगुती चवीचं जेवण</title>
-  <link rel="manifest" href="manifest.webmanifest">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सुरेखा भोजन - ठाणे लोकल ऑर्डर</title>
   <link rel="stylesheet" href="styles.css">
-  <meta name="theme-color" content="#e91e63">
 </head>
 <body>
-  <header class="topbar">
-    <h1>सुरेखा भोजन</h1>
-    <p>घरगुती चवीचं जेवण • ठाणे</p>
+  <header>
+    <h1>🍛 सुरेखा भोजन 🍛</h1>
+    <p>फक्त ठाण्यात घरपोच सेवा उपलब्ध</p>
   </header>
 
-  <section class="hero">
-    <h2>आजचा स्पेशल ✨</h2>
-    <p id="special">मटण थाळी – मसालेदार रस्सा, भाकरी, भात, सलाड</p>
+  <section class="contact">
+    <h2>📞 संपर्क साधा</h2>
+    <p>
+      मोबाईल: <a href="tel:8080758010/9702735460></a><br>
+      WhatsApp: <a href="https://wa.me/918080758010" target="_blank">8080758010</a>
+    </p>
   </section>
 
-  <section class="menu">
-    <h3>मेनू</h3>
-    <div id="menuGrid" class="grid"></div>
+  <section class="qr">
+    <h2>💳 QR कोडद्वारे पेमेंट करा</h2>
+    <img src="qr-code.png" alt="QR कोड" width="200">
+    <p>Scan & Pay via PhonePe / Google Pay</p>
   </section>
 
-  <section class="cta">
-    <a class="btn" href="tel:+918080758010>📞 फोनवर ऑर्डर</a>
-    <a class="btn" href="https://wa.me/918080758010?text=नमस्कार,%20सुरेखा%20भोजन%20ऑर्डर%20देण्यासाठी%20मेसेज%20करतेय.">💬 WhatsApp</a>
+  <section class="order">
+    <h2>🍽️ घरपोच ऑर्डर द्या</h2>
+    <p>आत्ताच कॉल करा किंवा WhatsApp वर मेसेज पाठवा!</p>
+    <a href="tel:8080758010" class="btn">📞 कॉल करा</a>
+    <a href="https://wa.me/918080758010" class="btn whatsapp">💬 WhatsApp</a>
   </section>
 
-  <footer class="foot">
-    <small>© 2025 सुरेखा आंभोरे • स्वच्छ, स्वादिष्ट घरगुती जेवण</small>
+  <footer>
+    <p>© 2025 सुरेखा भोजन | फक्त ठाण्यात ऑर्डर डिलिव्हरी</p>
   </footer>
-
-  <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js');
-    }
-  </script>
 </body>
 </html>
