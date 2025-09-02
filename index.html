@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>सुरेखा भोजन – घरगुती चवीचं जेवण</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#e91e63">
+</head>
+<body>
+  <header class="topbar">
+    <h1>सुरेखा भोजन</h1>
+    <p>घरगुती चवीचं जेवण • ठाणे</p>
+  </header>
+
+  <section class="hero">
+    <h2>आजचा स्पेशल ✨</h2>
+    <p id="special">मटण थाळी – मसालेदार रस्सा, भाकरी, भात, सलाड</p>
+  </section>
+
+  <section class="menu">
+    <h3>मेनू</h3>
+    <div id="menuGrid" class="grid"></div>
+  </section>
+
+  <section class="cta">
+    <a class="btn" href="tel:+91XXXXXXXXXX">📞 फोनवर ऑर्डर</a>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=नमस्कार,%20सुरेखा%20भोजन%20ऑर्डर%20देण्यासाठी%20मेसेज%20करतेय.">💬 WhatsApp</a>
+  </section>
+
+  <footer class="foot">
+    <small>© 2025 सुरेखा आंभोरे • स्वच्छ, स्वादिष्ट घरगुती जेवण</small>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js');
+    }
+  </script>
+</body>
+</html>
